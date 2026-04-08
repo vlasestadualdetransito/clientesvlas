@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angeluz Despachante - Despachante de Veículos em Ouro Branco</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --accent-color: #3498db;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .bg-primary-custom {
+            background-color: var(--primary-color);
+        }
+        
+        .text-primary-custom {
+            color: var(--primary-color);
+        }
+        
+        .bg-secondary-custom {
+            background-color: var(--secondary-color);
+        }
+        
+        .text-secondary-custom {
+            color: var(--secondary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            position: relative;
+        }
+        
+        .service-card {
+            transition: transform 0.3s;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+        
+        .contact-info i {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-float:hover {
+            color: #FFF;
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="fw-bold">Angeluz</span> Despachante
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Soluções completas para seu veículo</h1>
+            <p class="lead mb-5">Agilidade, segurança e transparência em todos os serviços automotivos</p>
+            <a href="#contact" class="btn btn-danger btn-lg px-4 me-2">
+                <i class="fas fa-phone-alt me-2"></i> Fale Conosco
+            </a>
+            <a href="https://wa.me/553137411829" class="btn btn-success btn-lg px-4">
+                <i class="fab fa-whatsapp me-2"></i> WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary-custom">Nossos Serviços</h2>
+                <p class="lead">Oferecemos soluções completas para todas as necessidades do seu veículo</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-car-alt"></i>
+                            </div>
+                            <h4 class="card-title">Licenciamento</h4>
+                            <p class="card-text">Regularização anual do seu veículo de forma rápida e descomplicada.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h4 class="card-title">Transferência</h4>
+                            <p class="card-text">Processamos toda a documentação necessária para transferência de propriedade.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <h4 class="card-title">Financiamento</h4>
+                            <p class="card-text">Auxiliamos na documentação para financiamento de veículos novos e usados.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-id-card"></i>
+                            </div>
+                            <h4 class="card-title">2ª Via de Documentos</h4>
+                            <p class="card-text">Emissão de segunda via do CRLV, CRV e outros documentos perdidos ou roubados.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-truck-pickup"></i>
+                            </div>
+                            <h4 class="card-title">Mudança de Município</h4>
+                            <p class="card-text">Regularização para veículos que mudaram de cidade ou estado.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-undo-alt"></i>
+                            </div>
+                            <h4 class="card-title">Processos Especiais</h4>
+                            <p class="card-text">Regularização de veículos com restrições, apreensões e outros casos especiais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold text-primary-custom mb-4">Sobre a Angeluz Despachante</h2>
+                    <p class="lead">Há mais de 10 anos oferecendo serviços de despachante veicular com excelência em Ouro Branco e região.</p>
+                    <p>A Angeluz Despachante é referência em agilidade e transparência na prestação de serviços relacionados a documentação de veículos. Nossa equipe altamente qualificada está pronta para resolver todas as burocracias para você.</p>
+                    
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="feature-icon fas fa-check-circle"></i>
+                            <span>Atendimento personalizado</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="feature-icon fas fa-check-circle"></i>
+                            <span>Processos ágeis e seguros</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="feature-icon fas fa-check-circle"></i>
+                            <span>Transparência em todas as etapas</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="feature-icon fas fa-check-circle"></i>
+                            <span>Preços justos e competitivos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Sobre a Angeluz Despachante" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row text-center">
+                                <div class="col-md-3 border-end">
+                                    <h3 class="text-secondary-custom fw-bold">+10</h3>
+                                    <p class="mb-0">Anos de experiência</p>
+                                </div>
+                                <div class="col-md-3 border-end">
+                                    <h3 class="text-secondary-custom fw-bold">+5.000</h3>
+                                    <p class="mb-0">Processos realizados</p>
+                                </div>
+                                <div class="col-md-3 border-end">
+                                    <h3 class="text-secondary-custom fw-bold">100%</h3>
+                                    <p class="mb-0">Clientes satisfeitos</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <h3 class="text-secondary-custom fw-bold">24h</h3>
+                                    <p class="mb-0">Atendimento emergencial</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-primary-custom">Entre em Contato</h2>
+                <p class="lead">Estamos à disposição para tirar suas dúvidas e atender suas necessidades</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-4 text-primary-custom">Informações de Contato</h4>
+                            
+                            <div class="contact-info mb-4">
+                                <p><i class="fas fa-map-marker-alt"></i> <strong>Endereço:</strong> Avenida Maria Firmina da Silva, 239 - Siderurgia, Ouro Branco - MG, 36492-182</p>
+                                <p><i class="fas fa-phone-alt"></i> <strong>Telefone:</strong> (31) 3741-1829</p>
+                                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> contato@angeluzdespachante.com.br</p>
+                                <p><i class="fas fa-clock"></i> <strong>Horário de Atendimento:</strong> Segunda a Sexta, das 8h às 18h</p>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <h5 class="mb-3">Nossas Redes Sociais</h5>
+                                <a href="#" class="btn btn-outline-primary me-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn btn-outline-info me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="https://wa.me/553137411829" class="btn btn-outline-success me-2"><i class="fab fa-whatsapp"></i></a>
+                                <a href="#" class="btn btn-outline-danger me-2"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-4 text-primary-custom">Envie uma Mensagem</h4>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nome Completo</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Telefone</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="service" class="form-label">Serviço de Interesse</label>
+                                    <select class="form-select" id="service">
+                                        <option selected>Selecione um serviço</option>
+                                        <option>Licenciamento</option>
+                                        <option>Transferência</option>
+                                        <option>Financiamento</option>
+                                        <option>2ª Via de Documentos</option>
+                                        <option>Mudança de Município</option>
+                                        <option>Processos Especiais</option>
+                                        <option>Outros</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Mensagem</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-danger w-100">Enviar Mensagem</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5 class="text-white mb-3">Angeluz Despachante</h5>
+                    <p class="mb-0 text-white-50">CNPJ: 51.111.505/0001-64</p>
+                    <p class="text-white-50">Razão Social: Oliveira e Fernandes Acessoria Veicular LTDA</p>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5 class="text-white mb-3">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white-50">Início</a></li>
+                        <li><a href="#services" class="text-white-50">Serviços</a></li>
+                        <li><a href="#about" class="text-white-50">Sobre</a></li>
+                        <li><a href="#contact" class="text-white-50">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-white mb-3">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Termos de Uso</a></li>
+                        <li><a href="#" class="text-white-50">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">© 2023 Angeluz Despachante. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-white-50">Data Situação Cadastral: 18/02/2022</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão do WhatsApp -->
+    <a href="https://wa.me/553137411829" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
